@@ -1,15 +1,20 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Urbanist, Caveat } from "next/font/google";
+import { Theme } from "@radix-ui/themes";
+import "@radix-ui/themes/styles.css";
 import "./globals.css";
+import Guidlines from "@/components/MinorComponents/Guidlines";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const urbanist = Urbanist({
   subsets: ["latin"],
+  display: "swap",
+  variable: "--font-urbanist",
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const caveat = Caveat({
   subsets: ["latin"],
+  display: "swap",
+  variable: "--font-caveat",
 });
 
 export const metadata: Metadata = {
@@ -23,11 +28,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
+    <html
+      lang="en"
+      className={`${urbanist.variable} ${caveat.variable} overflow-x-hidden`}
+    >
+      <body>
+        <Theme>
+          <div className="relative mx-auto max-w-[960px] px-4 pt-5">
+            {children}
+            <Guidlines />
+          </div>
+        </Theme>
       </body>
     </html>
   );
