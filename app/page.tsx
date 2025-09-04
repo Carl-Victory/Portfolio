@@ -13,7 +13,7 @@ import BackToTop from "@/components/MinorComponents/BackToTop";
 
 export default function Home() {
   return (
-    <div>
+    <div className="font-urbanist">
       <Nav />
       <Hero />
       <CardSection />

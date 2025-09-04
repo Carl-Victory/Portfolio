@@ -2,6 +2,7 @@
 
 html {
   overflow-y: scroll;
+  font-family: var(--font-urbanist), sans-serif;
 }
 
 @layer utilities {
@@ -28,5 +29,5 @@ html {
 }
 
 .font-caveat {
-  font-family: var(--font-caveat) !important;
+  font-family: var(--font-caveat);
 }

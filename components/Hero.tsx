@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import { Button } from "@radix-ui/themes";
+import { motion } from "framer-motion";
 
 const Hero = () => {
   const handleScrollTo = (id: string) => {
@@ -12,6 +13,12 @@ const Hero = () => {
       });
     }
   };
+
+  const textVariants = {
+    initial: { y: 20, opacity: 0, filter: "blur(4px)" },
+    animate: { y: 0, opacity: 1, filter: "blur(0px)" },
+  };
+
   return (
     <div className="flex flex-col items-center justify-center mt-40 relative z-30">
       <div className="leading-[1.2]">
@@ -24,11 +31,25 @@ const Hero = () => {
       </div>
       <div
         className="!flex !flex-col !gap-y-0.5
-    font-urbanist text-[120px] font-semibold tracking-[-0.03em] leading-[0.95] text-[#1a1a1a]
-    text-center mt-[-10px]"
+      font-urbanist text-[120px] font-semibold tracking-[-0.03em] leading-[0.95] text-[#1a1a1a]
+      text-center mt-[-10px]"
       >
-        <span>Victory</span>
-        <span>Nnamdi</span>
+        <motion.span
+          variants={textVariants}
+          initial="initial"
+          animate="animate"
+          transition={{ duration: 0.8, ease: "easeOut" }}
+        >
+          Victory
+        </motion.span>
+        <motion.span
+          variants={textVariants}
+          initial="initial"
+          animate="animate"
+          transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+        >
+          Nnamdi
+        </motion.span>
       </div>
       <div className="flex gap-4 mt-10 ">
         <a href="mailto:victorynnamdi0@gmail.com?subject=Project%20Inquiry%20from%20Your%20Portfolio">

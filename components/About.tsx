@@ -6,7 +6,7 @@ import { Button } from "@radix-ui/themes";
 
 const About = () => {
   return (
-    <div id="About" className="mt-20 relative z-30 p-4">
+    <div id="About" className="mt-20 relative z-30 p-4 md:p-0">
       {/* Intro text */}
       <div className="text-center md:text-left text-[22px] font-caveat text-gray-400 mb-5 md:relative md:left-[12rem] md:-rotate-10 md:mb-15 -rotate-6">
         <p>Delivering great </p>

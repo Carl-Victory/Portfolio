@@ -35,12 +35,12 @@ const Projects = () => {
         <ProjectCard
           BgColor="bg-fuchsia-950"
           BgColor2=" bg-fuchsia-300"
-          InnerText="Learning Management System for LearnVerse"
+          InnerText="Frontend development for Burmars Ai"
         />
         <ProjectCard
           BgColor="bg-indigo-950"
           BgColor2=" bg-indigo-300"
-          InnerText="Learning Management System for LearnVerse"
+          InnerText="Personal Portfolio Website"
         />
       </div>
     </div>

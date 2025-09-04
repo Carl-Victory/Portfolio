@@ -1,5 +1,7 @@
+"use client";
 import React from "react";
 import { DesktopIcon } from "@radix-ui/react-icons";
+import { motion } from "framer-motion";
 
 interface CardsProps {
   title: string;
@@ -16,9 +18,16 @@ const Cards: React.FC<CardsProps> = ({
   bgColor,
   rotate,
 }) => {
+  // Define the animation variants for the individual card.
+  const cardVariants = {
+    initial: { y: 50, opacity: 0, filter: "blur(4px)" },
+    animate: { y: 0, opacity: 1, filter: "blur(0px)" },
+  };
+
   return (
-    <div
-      className={`w-[360px] h-[330px] drop-shadow-lg bg-white rounded-4xl  relative z-30 ${rotate} flex flex-col overflow-hidden justify-between`}
+    <motion.div
+      variants={cardVariants}
+      className={`w-[360px] h-[330px] drop-shadow-lg bg-white rounded-4xl  relative z-30 ${rotate} flex flex-col overflow-hidden justify-between`}
     >
       <div className={`${bgColor} w-full h-2 absolute top-0 inset-x-0`} />
       <div className="flex flex-col mt-25 justify-center items-center">
@@ -36,7 +45,7 @@ const Cards: React.FC<CardsProps> = ({
           <p>{subtitle}</p>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
