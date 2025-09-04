@@ -1,10 +1,27 @@
+"use client";
 import React from "react";
 import TextType1 from "./Reusables/TextType1";
 import TextType2 from "./Reusables/TextType2";
 import Image from "next/image";
 import { Button } from "@radix-ui/themes";
+import { motion } from "framer-motion";
 
 const About = () => {
+  // Variants for the container to stagger the children's animations
+  const containerVariants = {
+    animate: {
+      transition: {
+        staggerChildren: 0.2,
+      },
+    },
+  };
+
+  // Variants for the individual h1 elements
+  const textVariants = {
+    initial: { y: 50, opacity: 0, filter: "blur(4px)" },
+    animate: { y: 0, opacity: 1, filter: "blur(0px)" },
+  };
+
   return (
     <div id="About" className="mt-20 relative z-30 p-4 md:p-0">
       {/* Intro text */}
@@ -14,10 +31,16 @@ const About = () => {
       </div>
 
       {/* Header Text */}
-      <div className="w-full flex flex-col items-center text-center text-[3rem] md:text-[5rem] leading-none font-semibold mb-15">
-        <h1>Here&apos;s a bit</h1>
-        <h1>about me</h1>
-      </div>
+      <motion.div
+        className="w-full flex flex-col items-center text-center text-[3rem] md:text-[5rem] leading-none font-semibold mb-15"
+        variants={containerVariants}
+        initial="initial"
+        whileInView="animate"
+        viewport={{ once: true }}
+      >
+        <motion.h1 variants={textVariants}>Here&apos;s a bit</motion.h1>
+        <motion.h1 variants={textVariants}>about me</motion.h1>
+      </motion.div>
 
       {/* Main content container */}
       <div className="flex flex-col md:h-102 md:flex-row justify-center items-center md:justify-between md:items-start gap-12 md:gap-x-12">

@@ -22,16 +22,16 @@ const Hero = () => {
   return (
     <div className="flex flex-col items-center justify-center mt-40 relative z-30">
       <div className="leading-[1.2]">
-        <p className="text-[22px] font-caveat text-gray-400 relative left-[150px] rotate-3">
+        <p className="text-[22px] font-caveat text-gray-400 relative left-[50px] md:left-[150px] rotate-3">
           Hello! I&apos;m a User-Focused
         </p>
-        <p className="text-[22px] font-caveat text-gray-400 relative left-[140px] rotate-3">
+        <p className="text-[22px] font-caveat text-gray-400 relative left-[60px] md:left-[140px] rotate-3">
           Full Stack Developer!
         </p>
       </div>
       <div
         className="!flex !flex-col !gap-y-0.5
-      font-urbanist text-[120px] font-semibold tracking-[-0.03em] leading-[0.95] text-[#1a1a1a]
+      font-urbanist text-[100px] md:text-[120px] font-semibold tracking-[-0.03em] leading-[0.95] text-[#1a1a1a]
       text-center mt-[-10px]"
       >
         <motion.span

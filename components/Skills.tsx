@@ -1,17 +1,40 @@
+"use client";
 import { Button } from "@radix-ui/themes";
 import React from "react";
 import Card2 from "./Reusables/Card2";
+import { motion } from "framer-motion";
 
 const Skills = () => {
+  // Variants for the container to stagger the children's animations
+  const containerVariants = {
+    animate: {
+      transition: {
+        staggerChildren: 0.1,
+      },
+    },
+  };
+
+  // Variants for the individual elements (h1 and Card2)
+  const itemVariants = {
+    initial: { y: 50, opacity: 0, filter: "blur(4px)" },
+    animate: { y: 0, opacity: 1, filter: "blur(0px)" },
+  };
+
   return (
     <div id="Skills" className="relative z-30 p-4 md:p-0 mt-15 md:mt-0">
       {/* Responsive layout for heading and button */}
       <div className="flex flex-col md:flex-row justify-center md:justify-between items-center md:items-end mt-20 md:mt-50 mb-10 md:mb-25 text-center md:text-left">
         {/* Responsive heading font size */}
-        <div className="flex flex-col items-center md:items-start text-[3rem] md:text-[5rem] leading-none font-semibold mb-6 md:mb-0">
-          <h1>What I bring</h1>
-          <h1>to the table</h1>
-        </div>
+        <motion.div
+          className="flex flex-col items-center md:items-start text-[3rem] md:text-[5rem] leading-none font-semibold mb-6 md:mb-0"
+          variants={containerVariants}
+          initial="initial"
+          whileInView="animate"
+          viewport={{ once: true }}
+        >
+          <motion.h1 variants={itemVariants}>What I bring</motion.h1>
+          <motion.h1 variants={itemVariants}>to the table</motion.h1>
+        </motion.div>
         {/* Button with a link to the experience section */}
         <a href="#Experience" className="w-full md:w-auto">
           <Button
@@ -27,38 +50,50 @@ const Skills = () => {
       </div>
 
       {/* Responsive layout for the cards */}
-      <div className="flex flex-col md:flex-row justify-center items-center ">
-        <Card2
-          backgroundColour="bg-amber-500"
-          Title="Front-End Expertise"
-          Subtitle1="Proper UI Integration"
-          Subtitle2="Responsive Designs"
-          Subtitle3="Low Latency Pages"
-          Subtitle4="Excellent SEO Optimization"
-          Subtitle5="Web  Optimization"
-          rotate="-rotate-3"
-        />
-        <Card2
-          backgroundColour="bg-blue-500"
-          Title="Backend Expertise"
-          Subtitle1="API integration"
-          Subtitle2="Secure Systems"
-          Subtitle3="Software Development"
-          Subtitle4="Database Management"
-          Subtitle5="Perfomance Optimization"
-          rotate="rotate-3"
-        />
-        <Card2
-          backgroundColour="bg-green-500"
-          Title="Tools and Platforms"
-          Subtitle1="Next Js"
-          Subtitle2="Nest Js"
-          Subtitle3="Node Js"
-          Subtitle4="TypeScript"
-          Subtitle5="Tailwind CSS"
-          rotate="-rotate-3"
-        />
-      </div>
+      <motion.div
+        className="flex flex-col md:flex-row justify-center items-center"
+        variants={containerVariants}
+        initial="initial"
+        whileInView="animate"
+        viewport={{ once: true }}
+      >
+        <motion.div variants={itemVariants}>
+          <Card2
+            backgroundColour="bg-amber-500"
+            Title="Front-End Expertise"
+            Subtitle1="Proper UI Integration"
+            Subtitle2="Responsive Designs"
+            Subtitle3="Low Latency Pages"
+            Subtitle4="Excellent SEO Optimization"
+            Subtitle5="Web  Optimization"
+            rotate="-rotate-3"
+          />
+        </motion.div>
+        <motion.div variants={itemVariants}>
+          <Card2
+            backgroundColour="bg-blue-500"
+            Title="Backend Expertise"
+            Subtitle1="API integration"
+            Subtitle2="Secure Systems"
+            Subtitle3="Software Development"
+            Subtitle4="Database Management"
+            Subtitle5="Perfomance Optimization"
+            rotate="rotate-3"
+          />
+        </motion.div>
+        <motion.div variants={itemVariants}>
+          <Card2
+            backgroundColour="bg-green-500"
+            Title="Tools and Platforms"
+            Subtitle1="Next Js"
+            Subtitle2="Nest Js"
+            Subtitle3="Node Js"
+            Subtitle4="TypeScript"
+            Subtitle5="Tailwind CSS"
+            rotate="-rotate-3"
+          />
+        </motion.div>
+      </motion.div>
 
       {/* Responsive layout for the bottom CTA section */}
       <div className="flex flex-col md:flex-row justify-between items-center mt-20 p-6 md:px-10 md:py-7 bg-white shadow-lg rounded-3xl text-center md:text-left">
