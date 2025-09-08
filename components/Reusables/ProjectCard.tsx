@@ -6,6 +6,7 @@ interface ProjectCardProps {
   InnerText: string;
   ImageSource: string;
   ImageAlt: string;
+  Link: string;
 }
 
 const ProjectCard: React.FC<ProjectCardProps> = ({
@@ -13,6 +14,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   ImageSource,
   ImageAlt,
   InnerText,
+  Link,
 }) => {
   return (
     <div
@@ -28,9 +30,11 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
       </div>
       <p className="text-white">{InnerText}</p>
       <div className="w-full px-2">
-        <button className="w-full bg-white text-black px-4 py-2 rounded-full">
-          View Project
-        </button>
+        <a href={`${Link}`} target="_blank" rel="noopener noreferrer">
+          <button className="w-full bg-white text-black px-4 py-2 rounded-full hover:bg-gray-100 shadow-md hover:shadow-lg transition-shadow duration-300">
+            View Project
+          </button>
+        </a>
       </div>
     </div>
   );

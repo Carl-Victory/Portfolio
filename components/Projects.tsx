@@ -51,24 +51,28 @@ const Projects = () => {
           ImageSource="/images/Signtel1.png"
           ImageAlt="Signtel Page Image"
           InnerText="Logistics App for Signtel On-Demand, a package delivery company located in Lagos Nigeria"
+          Link="https://signtel-frontend-1-fx76.onrender.com/"
         />
         <ProjectCard
           BgColor="bg-green-950"
           ImageSource="/images/LearnVerse1.png"
           ImageAlt="LearnVerse Page Image"
           InnerText="Learning Management System for LearnVerse, an online education platform offering diverse courses"
+          Link="https://learnverrse.github.io/learnverrse/"
         />
         <ProjectCard
           BgColor="bg-fuchsia-950"
           ImageSource="/images/Burmars1.png"
           ImageAlt="Burmars Page Image"
           InnerText="Frontend development for Burmars Ai, an AI-powered building material cost estimation tool"
+          Link="https://burmars-ai.vercel.app/"
         />
         <ProjectCard
           BgColor="bg-indigo-950"
           ImageSource="/images/Portfolio1.png"
           ImageAlt="Portfolio Page Image"
           InnerText="Personal Portfolio Website, showcasing my skills, projects, and experience as a developer"
+          Link="https://victory-portfolio.pxxl.click"
         />
       </div>
     </div>
