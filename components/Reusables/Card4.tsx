@@ -21,7 +21,7 @@ const Card4: React.FC<Card4Props> = ({
       className={`w-[376] md:w-[465px] bg-white shadow-lg rounded-4xl ${Rotate}`}
     >
       <div className="h-[224px] border-b border-gray-300 flex justify-center items-center px-10 ">
-        <p className="font-semibold text-[1.2rem] text-center leading-7">
+        <p className="font-medium text-[1.2rem] text-center leading-7">
           {Review}
         </p>
       </div>

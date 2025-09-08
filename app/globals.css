@@ -2,7 +2,7 @@
 
 html {
   overflow-y: scroll;
-  font-family: var(--font-urbanist), sans-serif;
+  font-family: var(--font-urbanist), sans-serif !important;
 }
 
 @layer utilities {
