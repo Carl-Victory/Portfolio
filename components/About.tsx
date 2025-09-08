@@ -62,7 +62,7 @@ const About = () => {
         {/* Image container */}
         <div className="relative rounded-lg bg-amber-500 w-[80%] max-w-[336px] h-102 overflow-hidden">
           <Image
-            src="/images/erasebg-transformed-1.png"
+            src="/images/erasebg-transformed-1.jpg"
             alt="Image of Victory Nnamdi"
             fill={true}
             style={{ objectFit: "cover", objectPosition: "bottom" }}
