@@ -28,11 +28,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html
-      lang="en"
-      className={`${urbanist.variable} ${caveat.variable} overflow-x-hidden`}
-    >
-      <body>
+    <html lang="en">
+      <body
+        className={`${urbanist.variable} ${caveat.variable} overflow-x-hidden`}
+      >
         <Theme>
           <div className="relative mx-auto max-w-[960px] px-4 pt-5">
             {children}
