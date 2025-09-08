@@ -66,7 +66,6 @@ const About = () => {
             alt="Image of Victory Nnamdi"
             fill={true}
             style={{ objectFit: "cover", objectPosition: "bottom" }}
-            priority
             loading="eager"
           />
         </div>

@@ -44,11 +44,11 @@ const Testimonials = () => {
       >
         {/* Left-aligned card for desktops, centered on mobile */}
         <motion.div
-          className="flex flex-col md:flex-row md:items-center gap-6 md:gap-30 justify-center md:justify-self-start"
+          className="flex flex-col md:flex-row items-center gap-6 md:gap-40 justify-center md:justify-self-start"
           variants={itemVariants}
         >
           <Card4
-            Review='"Victory is an exceptional backend team lead. His strategic insights and technical prowess were critical in developing our logistics systems."'
+            Review='"Victory is an exceptional backend team lead. His strategic insights and technical prowess were critical in developing our product."'
             Name="Damilola Deborah"
             Position="Lead Product Manager at Signtel"
             Source="/images/Dami.png"

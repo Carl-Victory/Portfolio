@@ -7,7 +7,6 @@ import Guidlines from "@/components/MinorComponents/Guidlines";
 
 const urbanist = Urbanist({
   subsets: ["latin"],
-  display: "swap",
   variable: "--font-urbanist",
 });
 
