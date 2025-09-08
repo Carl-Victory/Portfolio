@@ -22,7 +22,7 @@ const Testimonials = () => {
 
   return (
     <div id="Testimonials" className="relative z-30 mt-20 md:mt-40 p-4">
-      {/* Responsive heading */}
+      {/* Heeading */}
       <motion.div
         className="flex flex-col items-center text-[3rem] md:text-[5rem] leading-none font-semibold text-center"
         variants={containerVariants}
@@ -34,7 +34,7 @@ const Testimonials = () => {
         <motion.h1 variants={itemVariants}>that inspires</motion.h1>
       </motion.div>
 
-      {/* Responsive grid for testimonials */}
+      {/* Grid for testimonials */}
       <motion.div
         className="grid grid-cols-1 gap-12 md:gap-4 mt-10 md:mt-35"
         variants={containerVariants}
@@ -44,7 +44,7 @@ const Testimonials = () => {
       >
         {/* Left-aligned card for desktops, centered on mobile */}
         <motion.div
-          className="flex flex-col md:flex-row items-center gap-6 md:gap-40 justify-center md:justify-self-start"
+          className="flex flex-col md:flex-row md:items-center gap-6 md:gap-30 justify-center md:justify-self-start"
           variants={itemVariants}
         >
           <Card4
@@ -61,7 +61,7 @@ const Testimonials = () => {
 
         {/* Right-aligned card for desktops, centered on mobile */}
         <motion.div
-          className="flex flex-col-reverse md:flex-row items-center gap-6 md:gap-40 justify-center md:justify-self-end"
+          className="flex flex-col-reverse md:flex-row items-center gap-6 md:gap-30 justify-center md:justify-self-end"
           variants={itemVariants}
         >
           <div className="w-20 h-20 md:w-30 md:h-30 bg-black rounded-4xl shadow-md flex justify-center items-center text-white">
@@ -78,7 +78,7 @@ const Testimonials = () => {
 
         {/* Left-aligned card for desktops, centered on mobile */}
         <motion.div
-          className="flex flex-col md:flex-row items-center gap-6 md:gap-40 justify-center md:justify-self-start"
+          className="flex flex-col md:flex-row items-center gap-6 md:gap-30 justify-center md:justify-self-start"
           variants={itemVariants}
         >
           <Card4

@@ -27,7 +27,7 @@ const Cards: React.FC<CardsProps> = ({
   return (
     <motion.div
       variants={cardVariants}
-      className={`w-[360px] h-[330px] drop-shadow-lg bg-white rounded-4xl  relative z-30 ${rotate} flex flex-col overflow-hidden justify-between`}
+      className={`w-[330px] h-[330px] drop-shadow-lg bg-white rounded-4xl  relative z-30 ${rotate} flex flex-col overflow-hidden justify-between`}
     >
       <div className={`${bgColor} w-full h-2 absolute top-0 inset-x-0`} />
       <div className="flex flex-col mt-25 justify-center items-center">

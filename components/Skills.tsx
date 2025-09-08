@@ -51,7 +51,7 @@ const Skills = () => {
 
       {/* Responsive layout for the cards */}
       <motion.div
-        className="flex flex-col md:flex-row justify-center items-center"
+        className="flex flex-col  md:flex-row justify-center  items-center"
         variants={containerVariants}
         initial="initial"
         whileInView="animate"

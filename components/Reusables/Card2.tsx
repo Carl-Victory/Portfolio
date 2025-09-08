@@ -23,7 +23,7 @@ const Card2: React.FC<Card2Props> = ({
 }) => {
   return (
     <div
-      className={`w-[360px] drop-shadow-lg bg-white rounded-4xl  relative z-30 flex flex-col overflow-hidden ${rotate}`}
+      className={`w-[22rem] min-md:w-[15.5rem] lg:w-[19rem] drop-shadow-lg bg-white rounded-4xl  relative z-30 flex flex-col overflow-hidden ${rotate}`}
     >
       <div
         className={`h-12 pl-10 flex items-center font-bold text-white ${backgroundColour}`}

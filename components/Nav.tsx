@@ -40,9 +40,9 @@ const Nav = () => {
 
   return (
     <>
-      {/* Main Nav Container - now fully interactive */}
+      {/* Main Nav Container */}
       <div className="fixed top-0 inset-x-0 z-50">
-        <div className="mx-auto max-w-[960px] relative flex justify-between items-center py-6 px-4">
+        <div className="mx-auto max-w-[960px] relative flex justify-between items-center py-6 px-4 ">
           <div
             className={`flex items-center gap-4  p-1.5 rounded-full shadow-md transition-discrete duration-300 ${
               isHovered ? "bg-gray-100 w-[245px]" : "bg-white w-[210px]"

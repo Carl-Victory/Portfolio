@@ -44,31 +44,32 @@ const Projects = () => {
         </motion.div>
       </div>
       {/* Grid for project cards */}
-      <div className="w-full grid grid-cols-1 md:items-center md:flex md:justify-between md:p-20 gap-8 md:gap-0 mt-10">
-        <div>
-          <ProjectCard
-            BgColor="bg-red-950"
-            BgColor2=" bg-red-300"
-            InnerText="Logistics App for Signtel On-Demand"
-          />
-          <ProjectCard
-            BgColor="bg-green-950"
-            BgColor2=" bg-green-300"
-            InnerText="Learning Management System for LearnVerse"
-          />
-        </div>
-        <div>
-          <ProjectCard
-            BgColor="bg-fuchsia-950"
-            BgColor2=" bg-fuchsia-300"
-            InnerText="Frontend development for Burmars Ai"
-          />
-          <ProjectCard
-            BgColor="bg-indigo-950"
-            BgColor2=" bg-indigo-300"
-            InnerText="Personal Portfolio Website"
-          />
-        </div>
+
+      <div className="flex flex-col items-center md:grid md:grid-cols-2 md:justify-items-center gap-10 mt-15">
+        <ProjectCard
+          BgColor="bg-red-950"
+          ImageSource="/images/Signtel1.png"
+          ImageAlt="Signtel Page Image"
+          InnerText="Logistics App for Signtel On-Demand, a package delivery company located in Lagos Nigeria"
+        />
+        <ProjectCard
+          BgColor="bg-green-950"
+          ImageSource="/images/LearnVerse1.png"
+          ImageAlt="LearnVerse Page Image"
+          InnerText="Learning Management System for LearnVerse, an online education platform offering diverse courses"
+        />
+        <ProjectCard
+          BgColor="bg-fuchsia-950"
+          ImageSource="/images/Burmars1.png"
+          ImageAlt="Burmars Page Image"
+          InnerText="Frontend development for Burmars Ai, an AI-powered building material cost estimation tool"
+        />
+        <ProjectCard
+          BgColor="bg-indigo-950"
+          ImageSource="/images/Portfolio1.png"
+          ImageAlt="Portfolio Page Image"
+          InnerText="Personal Portfolio Website, showcasing my skills, projects, and experience as a developer"
+        />
       </div>
     </div>
   );
