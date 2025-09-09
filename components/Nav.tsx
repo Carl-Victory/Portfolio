@@ -55,6 +55,7 @@ const Nav = () => {
               alt="Profile-Picture"
               width={40}
               height={40}
+              priority={true}
               className="rounded-full object-cover"
             />
             <div className="font-urbanist flex flex-col gap-y-0.1">
